@@ -1,4 +1,2 @@
 # ROM
-Vaje pri predmetu Računalniška orodja v matematiki, 2019-2020
-NEKI SM SPREMENILA
-še neki sem spremenila
+Za seminarsko nalogo bi opisala limito funkcije. Vključila definicijo, pravila, računanje limit in nekaj grafov za primer.
