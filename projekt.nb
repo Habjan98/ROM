@@ -1,0 +1,1896 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     72653,       1888]
+NotebookOptionsPosition[     69554,       1835]
+NotebookOutlinePosition[     69897,       1850]
+CellTagsIndexPosition[     69854,       1847]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["LIMITA FUNKCIJE",
+ FontFamily->"Bradley Hand ITC",
+ FontSize->18,
+ FontWeight->"Bold",
+ FontSlant->"Italic",
+ FontColor->RGBColor[
+  0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]]], "Input",
+ CellChangeTimes->{{3.7884328706045074`*^9, 3.7884328770240917`*^9}, {
+   3.7884330400505424`*^9, 3.788433093284098*^9}, {3.7884331795955133`*^9, 
+   3.7884332100705442`*^9}, {3.7884333089071445`*^9, 3.788433308910144*^9}, 
+   3.7884333608277893`*^9, {3.7884334341280437`*^9, 3.7884334384897623`*^9}, {
+   3.788433490852372*^9, 3.788433578016731*^9}, 3.7884336195260468`*^9, {
+   3.78843383580105*^9, 3.7884338542728567`*^9}, {3.788433897064089*^9, 
+   3.788433983762477*^9}, {3.788434058749143*^9, 3.788434109499859*^9}, {
+   3.7884341434396625`*^9, 3.7884341713978553`*^9}, {3.788434214483067*^9, 
+   3.7884343394049864`*^9}, 3.788434382529195*^9, {3.788434510241928*^9, 
+   3.7884345199873*^9}, {3.788434656070493*^9, 3.7884346813988543`*^9}, {
+   3.788434737601218*^9, 3.78843475684897*^9}, {3.7884348074936953`*^9, 
+   3.7884348209378242`*^9}, 3.788434903555481*^9, {3.788434997414406*^9, 
+   3.7884349986013355`*^9}, {3.7884351010446997`*^9, 
+   3.7884351235712433`*^9}, {3.788435175539879*^9, 3.788435185073262*^9}, {
+   3.788435270754715*^9, 3.7884353957046347`*^9}, {3.788435431541313*^9, 
+   3.7884354714867306`*^9}, 3.788435514825926*^9, {3.7884356762314787`*^9, 
+   3.7884356952152524`*^9}, 3.7884362034328628`*^9, 3.7884413243484907`*^9},
+ Background->RGBColor[
+  0.7019607843137254, 0.7019607843137254, 
+   1.],ExpressionUUID->"2714567a-bb91-4a2a-bd5c-2e49fe109ddc"],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+   "Limita", " ", "funkcije", " ", "v", " ", "to\[CHacek]ki", " ", "a", " ", 
+    "je", " ", "\[SHacek]tevilo"}], ",", " ", 
+   RowBox[{"ki", " ", "se", " ", "mu", " ", "vrednost", " ", "funkcije", "  ", 
+    RowBox[{"f", "(", "x", ")"}], " ", "pribli\[ZHacek]uje"}], ",", " ", 
+   RowBox[{
+   "ko", " ", "se", " ", "vrednost", " ", "spremenljivke", " ", "x", " ", 
+    "pribli\[ZHacek]uje", " ", "danemu", " ", "\[SHacek]tevilu", " ", 
+    RowBox[{"a", ".", " ", "\[CapitalSHacek]tevilo"}], " ", "a", " ", "je", 
+    " ", "v", " ", "definicijskem", " ", "obmo\[CHacek]ju", " ", "ali", " ", 
+    "vsaj", " ", "na", " ", "njegovem"}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"robu", ".", "  ", "Limito"}], " ", "funkcije", " ", 
+    "ozna\[CHacek]imo", " ", "z", " ", 
+    TagBox[
+     TemplateBox[{RowBox[{"f", "(", "x", ")"}],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm], "  ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"beri", ":", " ", "\"\< Limita f(x), ko gre x proti a.\>\""}], 
+      ")"}], ".", " ", "\n", "Dodatno"}], " ", "definiramo", " ", "za", " ", 
+    "funkcijo", " ", 
+    RowBox[{"f", "(", "x", ")"}], " ", "z", " ", "navzgor", " ", "neomejenim",
+     " ", "definicijskim", " ", 
+    RowBox[{"obmo\[CHacek]jem", ".", " ", "\n", "A"}]}], "  ", "=", "  ", 
+   RowBox[{
+    RowBox[{
+     FormBox[
+      TagBox[
+       TemplateBox[{RowBox[{"f", "(", "x", ")"}],"x","a"},
+        "Limit2Arg",
+        DisplayFunction->(RowBox[{
+           TagBox[
+            UnderscriptBox[
+             StyleBox["\"lim\"", ShowStringCharacters -> False], 
+             RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], 
+            Identity, SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+        InterpretationFunction->(RowBox[{"Limit", "[", 
+           RowBox[{#, ",", 
+             RowBox[{#2, "->", #3}]}], "]"}]& )],
+       HoldForm],
+      TraditionalForm], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     RowBox[{"f", "(", "x", ")"}]}], "  ", "se", " ", "od", " ", 
+    "\[SHacek]tevila", " ", "A", " ", "lo\[CHacek]i", " ", "za", " ", 
+    "poljubno", " ", "malo", " ", "za", " ", "vsak", " ", "dovolj", " ", 
+    "velik", " ", 
+    StyleBox["x",
+     FontFamily->"Palatino Linotype",
+     FontSlant->"Italic"], 
+    StyleBox[" ",
+     FontFamily->"Palatino Linotype",
+     FontSlant->"Italic"], 
+    StyleBox["\[Epsilon]",
+     FontFamily->"Palatino Linotype",
+     FontSize->18,
+     FontSlant->"Italic"], 
+    StyleBox[" ",
+     FontFamily->"Palatino Linotype",
+     FontSlant->"Italic"], 
+    StyleBox[
+     RowBox[{"Df", "."}],
+     FontFamily->"Palatino Linotype",
+     FontSlant->"Italic"]}]}], TraditionalForm]}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.788356869378009*^9, 3.7883568723468137`*^9}, 
+   3.788356904831716*^9, 3.78835741439774*^9, {3.788357516279147*^9, 
+   3.788357540423586*^9}, {3.7883575986108217`*^9, 3.788357627163974*^9}, {
+   3.788357800095785*^9, 3.788357802302641*^9}, {3.7884357148309836`*^9, 
+   3.7884357252103114`*^9}, {3.7884357890431795`*^9, 3.788435789744135*^9}, {
+   3.7884358206651344`*^9, 3.788435881022726*^9}, {3.7884362063616743`*^9, 
+   3.7884362831377068`*^9}, {3.788436319481355*^9, 3.7884363530181847`*^9}, {
+   3.7884363945934973`*^9, 3.7884364876644716`*^9}, {3.7884365306846895`*^9, 
+   3.788436767984333*^9}, {3.7884368349489994`*^9, 3.788436837519832*^9}, {
+   3.7884369810065484`*^9, 3.7884370856737776`*^9}, {3.7884371241622877`*^9, 
+   3.7884371668915195`*^9}, {3.7884387841933885`*^9, 3.7884388836044793`*^9}, 
+   3.788446935678914*^9, {3.78844733248524*^9, 3.7884473451054225`*^9}},
+ EmphasizeSyntaxErrors->
+  True,ExpressionUUID->"6d5602d8-6b49-48b0-85c4-a1574d607576"],
+
+Cell[TextData[{
+ StyleBox["Ra\[CHacek]unanje limit funkcij ene spremenljivke:",
+  FontFamily->"Source Sans Pro SemiBold",
+  FontSize->15,
+  FontWeight->"SemiBold",
+  FontSlant->"Italic",
+  FontVariations->{"Underline"->True},
+  Background->RGBColor[0.792156862745098, 0.792156862745098, 1.]],
+ StyleBox["\n\n\[CapitalCHacek]e ostajata ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain"],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{"f", "(", "x", ")"}],"x","a"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Output",
+  CellChangeTimes->{3.7884347947145214`*^9, 3.7884348864885817`*^9, 
+   3.788435087821556*^9, 3.788437108782282*^9, 3.7884380200058355`*^9, 
+   3.788438122812185*^9, 3.788439800608664*^9},
+  FontSize->15,ExpressionUUID->"480bbd25-9d7e-4ea7-a513-a76359d8750e"],
+ StyleBox[" in ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain"],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{"g", "(", "x", ")"}],"x","a"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Output",
+  CellChangeTimes->{
+   3.7884347947145214`*^9, 3.7884348864885817`*^9, 3.788435087821556*^9, 
+    3.788437108782282*^9, 3.7884380200058355`*^9, 3.788438122812185*^9, {
+    3.788439800608664*^9, 3.7884398246581078`*^9}},
+  FontSize->15,ExpressionUUID->"4a16d883-99cb-4e37-bbfb-ab7d6acfe5ce"],
+ StyleBox[" (za a \[Element] \[DoubleStruckCapitalR] ali a = \[PlusMinus]\
+\[Infinity]),  je : \n\n",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Succeeds]", 
+    TagBox[
+     TemplateBox[{RowBox[{"[", 
+         RowBox[{"f", "(", "x", ")"}], " "}],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm]}], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "cf684d89-4948-42e1-9708-4400c642bb84"],
+ StyleBox["\[PlusMinus] g(x)] = ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{"f", "(", "x", ")"}],"x","a"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "b1407ad1-ef3d-4f73-b780-e3c9893a8d6d"],
+ StyleBox[" \[PlusMinus] ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{"g", "(", "x", ")"}],"x","a"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "41b4b513-4d76-4708-8f8f-c4c08afa8b2c"],
+ StyleBox["\n",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Succeeds]", 
+    TagBox[
+     TemplateBox[{RowBox[{"cf", "(", "x", ")"}],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm]}], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "e88ca514-96e4-4d3d-a6d2-3ddf0dff1ba9"],
+ StyleBox[" = c  \[CenterDot] ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{"f", "(", "x", ")"}],"x","a"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "d56ab0cc-2f20-4434-9790-cbe5c31302eb"],
+ StyleBox["\n",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Succeeds]", 
+    TagBox[
+     TemplateBox[{RowBox[{
+         RowBox[{
+           RowBox[{"f", "(", "x", ")"}], 
+           RowBox[{"g", "(", "x", ")"}]}], " ", "=", " "}],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm]}], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "63224343-f4ad-43cb-b203-63ca9ad362e4"],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{"f", "(", "x", ")"}],"x","a"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "794a5c20-478a-45aa-9bc0-d85467e71f07"],
+ StyleBox[" \[CenterDot] ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{"g", "(", "x", ")"}],"x","a"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "3f117c0b-0e52-4464-9f07-4dae1f3c3de0"],
+ StyleBox[" \n",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Succeeds]", 
+    TagBox[
+     TemplateBox[{RowBox[{"g", "(", "x", ")"}],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm]}], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "03c274c2-44fd-4293-8c6e-80ea25ae5c7f"],
+ StyleBox[" \[NotEqual] 0 \[DoubleRightArrow] ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{FractionBox[
+       RowBox[{"f", "(", "x", ")"}], 
+       RowBox[{"g", "(", "x", ")"}]],"x","a"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "0ea4a681-723b-4c01-889b-27b35a66c802"],
+ StyleBox[" = ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    TagBox[
+     TemplateBox[{RowBox[{"f", "(", "x", ")"}],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm], 
+    TagBox[
+     TemplateBox[{RowBox[{"g", "(", "x", ")"}],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm]], TraditionalForm]],
+  FontSize->15,
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "5868a175-90f4-4f6f-9dbd-022ecac7cd2f"],
+ StyleBox["\n",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Succeeds]", 
+    TagBox[
+     TemplateBox[{SuperscriptBox[
+        RowBox[{"(", 
+          RowBox[{"f", "(", "x", ")"}], ")"}], "n"],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm]}], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "849f1b92-1b52-4c48-b06e-9dea5ea98d74"],
+ StyleBox[" = [",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{SuperscriptBox[
+       RowBox[{
+         RowBox[{"f", "(", "x", ")"}], "]"}], "n"],"x","a"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "128ee9dc-4ea4-4f63-adb2-b28edcf7d04c"],
+ StyleBox["       ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RadicalBox[
+       RowBox[{"f", "(", "x", ")"}], "n"],"x","a"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "ca76aa5c-aae2-410b-9604-8cb4d7bd2e08"],
+ StyleBox[" = ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   RadicalBox[
+    TagBox[
+     TemplateBox[{RowBox[{"f", "(", "x", ")"}],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm], "n"], TraditionalForm]],
+  FontSize->15,
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "6bffc798-61c4-4c09-9670-53ea7263cd7d"],
+ StyleBox["\n",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Succeeds]", 
+    TagBox[
+     TemplateBox[{SuperscriptBox["c", 
+        RowBox[{"f", "(", "x", ")"}]],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm]}], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "24c2cbc4-465b-4342-8228-bfbace2dd66f"],
+ StyleBox[" = ",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    TagBox[
+     TemplateBox[{RowBox[{"f", "(", "x", ")"}],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm]], TraditionalForm]],
+  FontSize->15,
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "5d090a45-6f0b-4133-87f6-e978d8259ddd"],
+ StyleBox["\n",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Succeeds]", 
+    TagBox[
+     TemplateBox[{RowBox[{
+         RowBox[{"h", "(", 
+           RowBox[{"f", "(", "x", ")"}], ")"}], " ", "=", " ", 
+         RowBox[{"h", "(", 
+           TagBox[
+            TemplateBox[{
+              RowBox[{
+                RowBox[{
+                  RowBox[{"f", "(", "x", ")"}], ")"}], " "}], "x", "a"}, 
+             "Limit2Arg", DisplayFunction -> (RowBox[{
+                TagBox[
+                 UnderscriptBox[
+                  StyleBox["\"lim\"", ShowStringCharacters -> False], 
+                  RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], 
+                 Identity, SyntaxForm -> "\[Limit]", Tooltip -> 
+                 "Limit"], #}]& ), 
+             InterpretationFunction -> (RowBox[{"Limit", "[", 
+                RowBox[{#, ",", 
+                  RowBox[{#2, "->", #3}]}], "]"}]& )], HoldForm]}]}],"x","a"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm]}], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.7884401153982944`*^9, 3.7884401154712915`*^9}},
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314],ExpressionUUID->
+  "9f0284d4-670e-4a63-978f-526a23d971cc"],
+ StyleBox[" za vsako zvezno funkcijo h.",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  Background->RGBColor[
+   0.8509803921568627, 0.8509803921568627, 0.9254901960784314]]
+}], "Input",
+ CellChangeTimes->{{3.7884396465276327`*^9, 3.7884397724764833`*^9}, {
+   3.788439812208917*^9, 3.7884398153517103`*^9}, {3.7884398472496457`*^9, 
+   3.788439855913084*^9}, {3.7884399270144825`*^9, 3.7884399429774513`*^9}, {
+   3.7884399952380695`*^9, 3.788440081385494*^9}, {3.788440127588505*^9, 
+   3.788440318150174*^9}, {3.78844040692443*^9, 3.788440751919531*^9}, {
+   3.7884408052320814`*^9, 3.7884409190107183`*^9}, {3.788441202137398*^9, 
+   3.7884412480054293`*^9}, 3.7884414022554507`*^9, {3.7884414367572184`*^9, 
+   3.7884414392570534`*^9}, {3.78844254944122*^9, 3.788442570946827*^9}, {
+   3.7884458226529374`*^9, 3.7884458240148487`*^9}, {3.7884462911806183`*^9, 
+   3.7884463078585405`*^9}},ExpressionUUID->"c6e34687-0188-4a0e-8963-\
+6bacd4328023"],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    StyleBox["Zgled",
+     FontVariations->{"Underline"->True}], ":", 
+    StyleBox[" ",
+     FontVariations->{"Underline"->True}], 
+    StyleBox["\n",
+     FontFamily->"Source Sans Pro",
+     FontSize->15,
+     FontWeight->"Plain"], 
+    RowBox[{
+     StyleBox[
+      RowBox[{"(", "a", ")"}],
+      FontFamily->"Source Sans Pro",
+      FontSize->15,
+      FontWeight->"Plain"], 
+     StyleBox[" ",
+      FontFamily->"Source Sans Pro",
+      FontSize->15,
+      FontWeight->"Plain"], 
+     FormBox[
+      TagBox[
+       TemplateBox[{FractionBox[
+          RowBox[{
+            SuperscriptBox["x", "2"], "-", "1"}], 
+          RowBox[{"x", "-", "1"}]],"x","1"},
+        "Limit2Arg",
+        DisplayFunction->(RowBox[{
+           TagBox[
+            UnderscriptBox[
+             StyleBox["\"lim\"", ShowStringCharacters -> False], 
+             RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], 
+            Identity, SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+        InterpretationFunction->(RowBox[{"Limit", "[", 
+           RowBox[{#, ",", 
+             RowBox[{#2, "->", #3}]}], "]"}]& )],
+       HoldForm],
+      TraditionalForm]}]}], 
+   StyleBox[" ",
+    FontFamily->"Times New Roman",
+    FontSize->16,
+    FontWeight->"Plain"], 
+   StyleBox["=",
+    FontFamily->"Times New Roman",
+    FontSize->16,
+    FontWeight->"Plain"], 
+   StyleBox[" ",
+    FontFamily->"Times New Roman",
+    FontSize->16,
+    FontWeight->"Plain"], 
+   RowBox[{
+    FormBox[
+     TagBox[
+      TemplateBox[{RowBox[{"(", 
+          RowBox[{"x", "+", "1"}], ")"}],"x","1"},
+       "Limit2Arg",
+       DisplayFunction->(RowBox[{
+          TagBox[
+           UnderscriptBox[
+            StyleBox["\"lim\"", ShowStringCharacters -> False], 
+            RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity,
+            SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+       InterpretationFunction->(RowBox[{"Limit", "[", 
+          RowBox[{#, ",", 
+            RowBox[{#2, "->", #3}]}], "]"}]& )],
+      HoldForm],
+     TraditionalForm], 
+    StyleBox[" ",
+     FontFamily->"Times New Roman",
+     FontSize->16,
+     FontWeight->"Plain"], 
+    StyleBox["=",
+     FontFamily->"Times New Roman",
+     FontSize->16,
+     FontWeight->"Plain"], 
+    StyleBox[" ",
+     FontFamily->"Times New Roman",
+     FontSize->16,
+     FontWeight->"Plain"], 
+    StyleBox["2",
+     FontFamily->"Times New Roman",
+     FontSize->16,
+     FontWeight->"Plain"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", "b", ")"}], 
+    FormBox[
+     TagBox[
+      TemplateBox[{FractionBox[
+         RowBox[{
+           SqrtBox[
+            RowBox[{"x", "+", "2"}]], "-", "2"}], 
+         RowBox[{"x", "-", "2"}]],"x","2"},
+       "Limit2Arg",
+       DisplayFunction->(RowBox[{
+          TagBox[
+           UnderscriptBox[
+            StyleBox["\"lim\"", ShowStringCharacters -> False], 
+            RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity,
+            SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+       InterpretationFunction->(RowBox[{"Limit", "[", 
+          RowBox[{#, ",", 
+            RowBox[{#2, "->", #3}]}], "]"}]& )],
+      HoldForm],
+     TraditionalForm]}], 
+   StyleBox[" ",
+    FontFamily->"Times New Roman",
+    FontSize->16,
+    FontWeight->"Plain"], 
+   StyleBox["=",
+    FontFamily->"Times New Roman",
+    FontSize->16,
+    FontWeight->"Plain"], 
+   StyleBox[" ",
+    FontFamily->"Times New Roman",
+    FontSize->16,
+    FontWeight->"Plain"], 
+   RowBox[{
+    FormBox[
+     TagBox[
+      TemplateBox[{FractionBox["1", 
+         RowBox[{
+           SqrtBox[
+            RowBox[{"x", "+", "2"}]], "+", "2"}]],"x","2"},
+       "Limit2Arg",
+       DisplayFunction->(RowBox[{
+          TagBox[
+           UnderscriptBox[
+            StyleBox["\"lim\"", ShowStringCharacters -> False], 
+            RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity,
+            SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+       InterpretationFunction->(RowBox[{"Limit", "[", 
+          RowBox[{#, ",", 
+            RowBox[{#2, "->", #3}]}], "]"}]& )],
+      HoldForm],
+     TraditionalForm], 
+    StyleBox[" ",
+     FontFamily->"Times New Roman",
+     FontSize->16,
+     FontWeight->"Plain"], 
+    StyleBox["=",
+     FontFamily->"Times New Roman",
+     FontSize->16,
+     FontWeight->"Plain"], 
+    StyleBox[" ",
+     FontFamily->"Times New Roman",
+     FontSize->16,
+     FontWeight->"Plain"], 
+    FormBox[
+     FractionBox["1", "4"],
+     TraditionalForm]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     StyleBox["c",
+      FontFamily->"Source Sans Pro",
+      FontSize->15,
+      FontWeight->"Plain"], ")"}], "  ", 
+    TagBox[
+     TemplateBox[{FractionBox[
+        RowBox[{"1", "-", "cosx"}], 
+        SuperscriptBox["x", "2"]],"x","0"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm]}], " ", "=", " ", 
+   RowBox[{
+    TagBox[
+     TemplateBox[{FractionBox[
+        RowBox[{
+          SuperscriptBox["sin", "2"], " ", "x"}], 
+        RowBox[{
+          SuperscriptBox["x", "2"], " ", 
+          RowBox[{"(", 
+            RowBox[{"1", "+", "cosx"}], ")"}]}]],"x","0"},
+      "Limit2Arg",
+      DisplayFunction->(RowBox[{
+         TagBox[
+          UnderscriptBox[
+           StyleBox["\"lim\"", ShowStringCharacters -> False], 
+           RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+          SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+      InterpretationFunction->(RowBox[{"Limit", "[", 
+         RowBox[{#, ",", 
+           RowBox[{#2, "->", #3}]}], "]"}]& )],
+     HoldForm], " ", "=", " ", 
+    FractionBox["1", "2"]}]}], TraditionalForm]}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.788356869378009*^9, 3.7883568723468137`*^9}, 
+   3.788356904831716*^9, 3.78835741439774*^9, {3.788357516279147*^9, 
+   3.788357540423586*^9}, {3.7883575986108217`*^9, 3.788357627163974*^9}, {
+   3.788357800095785*^9, 3.788357802302641*^9}, {3.7884357148309836`*^9, 
+   3.7884357252103114`*^9}, {3.7884357890431795`*^9, 3.788435789744135*^9}, {
+   3.7884358206651344`*^9, 3.788435881022726*^9}, {3.7884362063616743`*^9, 
+   3.7884362831377068`*^9}, {3.788436319481355*^9, 3.7884363530181847`*^9}, {
+   3.7884363945934973`*^9, 3.7884364876644716`*^9}, {3.7884365306846895`*^9, 
+   3.7884366898263946`*^9}, 3.7884377281162057`*^9, {3.788438029596217*^9, 
+   3.788438034275914*^9}, {3.788438134579423*^9, 3.7884381557670517`*^9}, 
+   3.788457968860138*^9},
+ EmphasizeSyntaxErrors->
+  True,ExpressionUUID->"0d98ac5d-75ef-432f-9f1e-533572698a04"],
+
+Cell[TextData[{
+ StyleBox["Limita v neskon\[CHacek]nosti",
+  FontFamily->"Source Sans Pro SemiBold",
+  FontWeight->"SemiBold",
+  FontSlant->"Italic",
+  FontVariations->{"Underline"->True},
+  Background->RGBColor[0.8, 0.8, 1.]],
+ "\n\nPri funkcijah ene realne spremenljivke nas v\[CHacek]asih zanima, kako \
+se vedejo funkcijske vrednosti, kadar argument ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ " nara\[SHacek]\[CHacek]a ( ali pada ) preko vsake meje. Tedaj \
+re\[CHacek]emo, da nas zanima limita funkcije v neskon\[CHacek]nosti.\n\n",
+ StyleBox["Zgled",
+  FontVariations->{"Underline"->True}],
+ ":\n\n(a) ",
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{FractionBox[
+       RowBox[{"1", "-", "x"}], 
+       RowBox[{"1", "+", "x"}]],"x",RowBox[{"\[PlusMinus]", "\[Infinity]"}]},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Output",
+  CellChangeTimes->{3.7884416386131535`*^9},
+  FontSize->16,ExpressionUUID->"a0126a33-6d5f-49ac-a191-0171dc1a686c"],
+ StyleBox[" = -1",
+  FontSize->16,
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ StyleBox[". Premi",
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ StyleBox["c",
+  FontFamily->"Source Sans Pro",
+  FontSize->15,
+  FontWeight->"Plain",
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ StyleBox["a y = -1 je tedaj vodoravna asimptota funkcije ",
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ StyleBox["f(x)",
+  FontSize->16,
+  FontSlant->"Italic",
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ StyleBox["= ",
+  FontSize->16,
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"1", "-", "x"}], 
+    RowBox[{"1", "+", "x"}]], TraditionalForm]],
+  CellChangeTimes->{3.7884416386131535`*^9},
+  FontSize->16,ExpressionUUID->"68961953-4c65-4791-ad4a-7c0abbff69c8"],
+ StyleBox[".\n(b) Zgodi se, da sta leva in desna asimptota (pri pogojih x \
+\[LongRightArrow] -\[Infinity] in x \[LongRightArrow] \[Infinity]) razli\
+\[CHacek]ni.\n        Tako je npr. pri funkciji f(x) = arctgx ali npr. pri \
+funkciji f(x) =",
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox["\[ExponentialE]", "x"], 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", "x"], "+", "1"}]],
+    FontSize->17], TraditionalForm]],ExpressionUUID->
+  "d2d751ae-fa86-4095-947d-98aeee45d3ea"],
+ StyleBox[" . V tem primeru je ",
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{
+     RowBox[{"f", "(", "x", ")"}],"x",RowBox[{"-", "\[Infinity]"}]},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Output",
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}},
+  FontSize->15,ExpressionUUID->"2c9cd533-29ae-4c21-8e73-9618174ca071"],
+ " = 0 in ",
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{"f", "(", "x", ")"}],"x","\[Infinity]"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Output",
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9},
+  FontSize->15,ExpressionUUID->"d2148da6-5e89-4d6e-ae3d-c4cad8c99124"],
+ " = 1.\n       \[LineSeparator]"
+}], "Text",
+ CellChangeTimes->{{3.7884409663326564`*^9, 3.7884410492382936`*^9}, {
+   3.7884410824691415`*^9, 3.788441095518297*^9}, 3.7884411773390045`*^9, {
+   3.788441456754922*^9, 3.788441575757222*^9}, {3.7884416493824587`*^9, 
+   3.7884418862661314`*^9}, {3.7884419246206493`*^9, 
+   3.7884420288899016`*^9}, {3.7884421145163617`*^9, 
+   3.7884421635791845`*^9}, {3.788446313358185*^9, 3.788446346713026*^9}, 
+   3.78844700298656*^9, {3.7884580324340253`*^9, 
+   3.788458036209781*^9}},ExpressionUUID->"324b00c6-61e4-442b-a5ad-\
+06a2ae1ec323"],
+
+Cell[TextData[{
+ StyleBox["Neobstoj limit",
+  FontFamily->"Source Sans Pro SemiBold",
+  FontWeight->"SemiBold",
+  FontSlant->"Italic",
+  FontVariations->{"Underline"->True},
+  Background->RGBColor[0.792156862745098, 0.792156862745098, 1.]],
+ "\n\nV\[CHacek]asih funk",
+ StyleBox["c",
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ "ija",
+ StyleBox[" f ",
+  FontSlant->"Italic"],
+ "v kak\[SHacek]ni to\[CHacek]ki ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ " nima limite, \[CHacek]eprav se da poljubno blizu ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ " ra\[CHacek]unati njene vrednosti.\n\n",
+ StyleBox["Zgledi",
+  FontVariations->{"Underline"->True}],
+ ":\n\n(a) Vzemimo npr. funkcijo ene spremenljivke, definirano za x \
+\[NotEqual] 0 s predpisom f(x) = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]],ExpressionUUID->
+  "a503a789-bc2b-4f94-9cad-7677e7c9c223"],
+ ". Ker je za vsako zaporedje (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],ExpressionUUID->
+  "ee85fdd7-7d97-4b83-a26d-ce61f440c70e"],
+ "), ki konvergira k 0, zaporedje funkcijskih\nvrednosti f(",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],ExpressionUUID->
+  "04f4acc0-ce7d-492e-8477-ca1405eb4b94"],
+ ") neomejeno (saj tedaj |f(",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],ExpressionUUID->
+  "c3100e7e-fcdd-4751-91c8-8c80ae666e28"],
+ ")| \[RightArrow] \[Infinity]) in zato ne konvergira, ni nobenega \
+\[SHacek]tevila b, ki bilo limita funkcije f v to\[CHacek]ki 0.\n(b) Naj bo \
+f(x) = [x], celi del realnega \[SHacek]tevila x in naj bo a poljubno celo \
+\[SHacek]tevilo. Vidimo, da je v neposredni bli\[ZHacek]ini levo od \
+\[SHacek]tevila a vrednost funkcije f enaka\na \[Minus] 1, desno pa a. Ce \
+torej npr. vzamemo zaporedje s \[CHacek]leni  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],ExpressionUUID->
+  "a1a1eab8-69ac-4547-9bfb-ca62f1fe7981"],
+ ", ki se sicer pribli\[ZHacek]ujejo celemu \[SHacek]tevilu a, vendar le\
+\[ZHacek]ijo izmeni\[CHacek]no enkrat levo enkrat desno od ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ ", vidimo, da ima\nzaporedje funkcijskih vrdnosti f(",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],ExpressionUUID->
+  "a5bf0e72-5e23-47ec-8e40-3bfe5ddd0511"],
+ ") dve stekali\[SHacek]\[CHacek]i, ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ " \[Minus] 1 in ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ ". Limite torej ni in pri celem \[SHacek]tevilu a funkcija ",
+ StyleBox["f",
+  FontSlant->"Italic"],
+ " nima limite. Podobno velja za sorodno funkcijo g(x) = x \[Minus] [x], \
+katere\nzaloga vrednosti je interval [0, 1)."
+}], "Text",
+ CellChangeTimes->{{3.788442171521674*^9, 3.788442251370504*^9}, {
+   3.788442291875882*^9, 3.7884424970106115`*^9}, 3.788446351947686*^9, {
+   3.7884574135660725`*^9, 
+   3.7884574320198765`*^9}},ExpressionUUID->"d37c703d-eb04-487b-9759-\
+b3a957a9fd82"],
+
+Cell[TextData[{
+ StyleBox["Limita funkije ve\[CHacek] spremenljivk",
+  FontVariations->{"Underline"->True}],
+ "\n\nPri funk",
+ StyleBox["c",
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ "ijah ve\[CHacek] sprmenljivk imamo lahko podobne ali \[SHacek]e \
+huj\[SHacek]e te\[ZHacek]ave. Tam si",
+ StyleBox["c",
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ "er ne moremo govoriti o levih in desnih limitah, pa\[CHacek] pa je limita \
+zaporedja funk",
+ StyleBox["c",
+  FontColor->RGBColor[
+   0.18823529411764706`, 0.18823529411764706`, 0.18823529411764706`]],
+ "ijskih vrednosti prav tako lahko odvisna od smeri, v kateri se zaporednje \
+to\[CHacek]k ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],ExpressionUUID->
+  "cbe88008-e9e2-4bc4-a769-79a1e112aad3"],
+ " pribli\[ZHacek]uje to\[CHacek]ki ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ ". \n\n",
+ StyleBox["Zgled",
+  FontVariations->{"Underline"->True}],
+ ":\n\n Za (x, y)\[NotEqual] (0, 0) lahko definiramo funkcijo dveh realnih \
+spremenljivk"
+}], "Text",
+ CellChangeTimes->{{3.788443197572279*^9, 3.7884432462331285`*^9}, {
+   3.788445910012285*^9, 3.7884459485247917`*^9}, {3.788446000591421*^9, 
+   3.7884461178098364`*^9}, 3.788446152622583*^9, {3.7884461897291822`*^9, 
+   3.7884461897361827`*^9}, {3.788446368923588*^9, 3.788446377024062*^9}, {
+   3.7884471330511427`*^9, 3.788447139962695*^9}, {3.788447490347022*^9, 
+   3.7884474928488617`*^9}},ExpressionUUID->"d48fd377-fcb3-4204-b4f1-\
+f39de0728213"],
+
+Cell[TextData[{
+ StyleBox["f(x, y) = ",
+  FontSize->18],
+ Cell[BoxData[
+  FormBox[
+   FractionBox["xy", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", " ", 
+      SuperscriptBox["y", "2"]}], ")"}]], TraditionalForm]],
+  FontSize->18,ExpressionUUID->"1b1cfc81-b180-44e4-a74a-abb863555722"]
+}], "Text",
+ CellChangeTimes->{{3.788443197572279*^9, 3.7884432462331285`*^9}, {
+  3.788445910012285*^9, 3.7884459485247917`*^9}, {3.788446000591421*^9, 
+  3.7884461178098364`*^9}},
+ TextAlignment->Center,ExpressionUUID->"8e04582e-f921-4cc5-88e6-28053c26ea4e"],
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Posebne limite",
+  FontFamily->"Source Sans Pro SemiBold",
+  FontWeight->"SemiBold",
+  FontSlant->"Italic",
+  FontVariations->{"Underline"->True},
+  Background->RGBColor[0.8, 0.8, 1.]],
+ "\n\n(a) ",
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{"cosx","x","0"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Output",
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},
+  FontSize->15,ExpressionUUID->"65d72844-6d71-4678-a902-48838084a276"],
+ " = 1.\n\nDokaz sledi iz ocene |1 \[Minus] cos x| = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["sin", "2"], " ", "x"}], 
+    RowBox[{"(", 
+     RowBox[{"1", " ", "+", " ", "cosx"}], ")"}]], TraditionalForm]],
+  ExpressionUUID->"d13c184e-9bf6-4551-8bb6-8f14f1821085"],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]],ExpressionUUID->
+  "4eae7da1-428a-48e0-bd6c-7eeb8295cd77"],
+ " za |x| \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Pi]", "2"], TraditionalForm]],ExpressionUUID->
+  "72171830-3dc9-414d-a209-5f0459af8be1"],
+ ".  Uporabili smo\noceno ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["sin", "2"], TraditionalForm]],ExpressionUUID->
+  "02c39a2e-560d-44ac-84ae-f47fff5909f9"],
+ " x \[LessEqual]",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    SuperscriptBox["x", "2"]}], TraditionalForm]],ExpressionUUID->
+  "8989f56f-9712-4d5b-b887-6b3df6041ba0"],
+ "  oziroma |sin x| \[LessEqual] |x|, ki jo brez te\[ZHacek]av izpeljemo za x \
+> 0 iz geometrijskega premisleka, da je dol\[ZHacek]ina pravokotnice na \
+abscisno os manj\[SHacek]a od dol\[ZHacek]ine tetive, le-ta pa manj\[SHacek]a \
+od dol\[ZHacek]ine kro\[ZHacek]nega loka. Za x < 0 upo\[SHacek]tevamo simetri\
+\[CHacek]no situacijo. \n\n(b)",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{FractionBox["sinx", "x"],"x","0"},
+    "Limit2Arg",
+    DisplayFunction->(RowBox[{
+       TagBox[
+        UnderscriptBox[
+         StyleBox["\"lim\"", ShowStringCharacters -> False], 
+         RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+        SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+    InterpretationFunction->(RowBox[{"Limit", "[", 
+       RowBox[{#, ",", 
+         RowBox[{#2, "->", #3}]}], "]"}]& )], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "c0f19eff-4b05-49ca-8539-d8239c16159d"],
+ "= 1\n\nFunkcija f(x) = sin x/x je definirana za x \[NotEqual] 0, tako da je \
+to\[CHacek]ka a = 0, v kateri ra\[CHacek]unamo limito, limitna to\[CHacek]ka \
+za definicijsko obmo\[CHacek]je. Upo\[SHacek]tevajmo, da za |x| \[LessEqual] \
+\[Pi]/2\nvelja ocena cos x \[LessEqual] sin x/x \[LessEqual] 1 , ki jo lahko \
+izpeljemo iz prej\[SHacek]nje neenakosti  |sin x| \[LessEqual] |x| \
+\[LessEqual] |tg x|.\n\n(c) ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{FractionBox[
+      RowBox[{
+        SuperscriptBox["\[ExponentialE]", "x"], "-", " ", "1"}], "x"],"x","0"},
+    "Limit2Arg",
+    DisplayFunction->(RowBox[{
+       TagBox[
+        UnderscriptBox[
+         StyleBox["\"lim\"", ShowStringCharacters -> False], 
+         RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+        SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+    InterpretationFunction->(RowBox[{"Limit", "[", 
+       RowBox[{#, ",", 
+         RowBox[{#2, "->", #3}]}], "]"}]& )], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "7ab4a765-dc3b-48a3-99b8-0cc99fbbe996"],
+ "= 1\n\nOd prej vemo, da za vsak n \[Element] \[DoubleStruckCapitalN] velja \
+ocena ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", " ", "+", " ", 
+      RowBox[{"1", "/", "n"}]}], ")"}], "n"], TraditionalForm]],
+  ExpressionUUID->"a4e45ccd-7141-409f-972d-a695db8f5268"],
+ "< e < (1 \[Minus] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{
+     RowBox[{"1", "/", "n"}], ")"}], 
+    RowBox[{"-", "n"}]], TraditionalForm]],ExpressionUUID->
+  "c9f5a88e-4a59-4289-920d-bf468d1f9165"],
+ " , ki jo lahko preoblikujemo v oceno 1 < n(",
+ Cell[BoxData[
+  FormBox[
+   RadicalBox["e", "n"], TraditionalForm]],ExpressionUUID->
+  "355d20ea-09be-41a0-83d6-35b47c3a1e47"],
+ "\[Minus]1) < n/(n\[Minus]1). Odtod po izreku o sendvi\[CHacek]u vidimo, da \
+je ",
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{"n", "(", 
+        RowBox[{
+          RadicalBox["e", "n"], "-", "1"}], ")"}],"n","\[Infinity]"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.788452868304188*^9, 3.788452890655738*^9}},
+  FontSize->15,
+  FontWeight->"Plain",ExpressionUUID->"602ad582-1697-47e1-b060-a82531aa3bd5"],
+ " = 1 \n in zato tudi",
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{
+        RowBox[{"(", 
+          RowBox[{"n", "+", "1"}], ")"}], " ", 
+        RowBox[{"(", 
+          RowBox[{
+            RadicalBox["e", "n"], "-", "1"}], ")"}]}],"n","\[Infinity]"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Output",
+  GeneratedCell->False,
+  CellAutoOverwrite->False,
+  CellChangeTimes->{3.7884530552370872`*^9},
+  FontSize->15,ExpressionUUID->"57ae0333-40ac-4d63-b586-9b74fb6722b7"],
+ " = 1 in ",
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    TemplateBox[{RowBox[{"n", "(", 
+        RowBox[{
+          RadicalBox["e", "n"], "-", "1"}], ")"}],"n","\[Infinity]"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )],
+    HoldForm], TraditionalForm]], "Input",
+  CellChangeTimes->{{3.788452868304188*^9, 3.788452890655738*^9}},
+  FontSize->15,
+  FontWeight->"Plain",ExpressionUUID->"0b898692-26a3-44ca-9499-c0cb77a2fd57"],
+ " = 1. Naj bo zdaj realen x > 0 in n = [1/x], se pravi, da je n \[LessEqual] \
+1/x < n + 1 oziroma\n1/(n + 1) < x \[LessEqual] 1/n. Potem je zaradi nara\
+\[SHacek]\[CHacek]anja eksponentne funkcije  n(",
+ Cell[BoxData[
+  FormBox[
+   RadicalBox["e", 
+    RowBox[{"n", "+", "1"}]], TraditionalForm]],ExpressionUUID->
+  "66f10254-2203-4f34-9d42-1b75fca9e320"],
+ "-1) < ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SuperscriptBox["e", "x"]}], TraditionalForm]],ExpressionUUID->
+  "d7c53b49-3642-416a-9e65-dee28339bcbb"],
+ " \[Minus] 1)/x \[LessEqual] (n + 1)( ",
+ Cell[BoxData[
+  FormBox[
+   RadicalBox["e", "n"], TraditionalForm]],ExpressionUUID->
+  "46a69d52-34c8-4bb7-81ea-0e693077cbda"],
+ " \[Minus] 1). Ce po\[SHacek]ljemo  x po pozitivnih vrednostih proti 0, nara\
+\[SHacek]\[CHacek]a\nn = [1/x] v neskon\[CHacek]no. Ker leva in desna stran \
+konvergirata proti 1, mora veljati tudi  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{RowBox[{"(", 
+        SuperscriptBox["e", 
+         RowBox[{"x", " "}]]}],"x","0"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )], "-"}], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "5255ce0f-338a-4ec6-85a4-5caec2649170"],
+ "1)/x = 1. Odtod tudi takoj sledi, da je ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{SuperscriptBox["e", 
+      RowBox[{"x", " "}]],"x","0"},
+    "Limit2Arg",
+    DisplayFunction->(RowBox[{
+       TagBox[
+        UnderscriptBox[
+         StyleBox["\"lim\"", ShowStringCharacters -> False], 
+         RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+        SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+    InterpretationFunction->(RowBox[{"Limit", "[", 
+       RowBox[{#, ",", 
+         RowBox[{#2, "->", #3}]}], "]"}]& )], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "97111e2a-70bb-4039-808c-103e319b6637"],
+ "= 1, saj lahko pi\[SHacek]emo \n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"e", " "}], "x"], TraditionalForm]],ExpressionUUID->
+  "feae9a5d-40ec-4583-b29c-1cf755c46fb2"],
+ "\[Minus] 1 = x \[CenterDot] (",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"e", " "}], "x"], TraditionalForm]],ExpressionUUID->
+  "87db587d-f463-4c0e-925d-eb8ea04c6d6e"],
+ " \[Minus] 1)/x in upo\[SHacek]tevamo pravilo za ra\[CHacek]unanje limite \
+produkta. Prav tako vidimo, da je tudi leva limita ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{RowBox[{"(", 
+        SuperscriptBox["e", 
+         RowBox[{"x", " "}]]}],"x","0"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )], "-"}], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "0aa3b4f2-aa86-4113-91c9-eab24ac03c40"],
+ "1)/x = 1, saj lahko z uvedbo nove\nspremenljivke y = \[Minus]x \
+izra\[CHacek]unamo levo limito",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{RowBox[{"(", 
+        SuperscriptBox["e", 
+         RowBox[{"x", " "}]]}],"x","0"},
+     "Limit2Arg",
+     DisplayFunction->(RowBox[{
+        TagBox[
+         UnderscriptBox[
+          StyleBox["\"lim\"", ShowStringCharacters -> False], 
+          RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+         SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+     InterpretationFunction->(RowBox[{"Limit", "[", 
+        RowBox[{#, ",", 
+          RowBox[{#2, "->", #3}]}], "]"}]& )], "-"}], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "dbd550b2-8e3d-4129-b8bb-47f4a30aa7d0"],
+ " 1)/x =",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{RowBox[{"(", 
+       SuperscriptBox["e", 
+        RowBox[{"-", "y", " "}]]}],"x","0"},
+    "Limit2Arg",
+    DisplayFunction->(RowBox[{
+       TagBox[
+        UnderscriptBox[
+         StyleBox["\"lim\"", ShowStringCharacters -> False], 
+         RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+        SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+    InterpretationFunction->(RowBox[{"Limit", "[", 
+       RowBox[{#, ",", 
+         RowBox[{#2, "->", #3}]}], "]"}]& )], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "ee611062-e9d2-48f8-bb47-e78becfb0ddb"],
+ "\[Minus] 1)/(\[Minus]y) = ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{RowBox[{"(", 
+       RowBox[{"1", " ", "-", 
+         SuperscriptBox["e", 
+          RowBox[{"-", "y", " "}]]}]}],"x","0"},
+    "Limit2Arg",
+    DisplayFunction->(RowBox[{
+       TagBox[
+        UnderscriptBox[
+         StyleBox["\"lim\"", ShowStringCharacters -> False], 
+         RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+        SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+    InterpretationFunction->(RowBox[{"Limit", "[", 
+       RowBox[{#, ",", 
+         RowBox[{#2, "->", #3}]}], "]"}]& )], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "ad549d6f-345f-4792-bdd1-efadf9225728"],
+ ")/y = ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{RowBox[{"(", 
+       SuperscriptBox[
+        SuperscriptBox["e", "y"], " "]}],"x","0"},
+    "Limit2Arg",
+    DisplayFunction->(RowBox[{
+       TagBox[
+        UnderscriptBox[
+         StyleBox["\"lim\"", ShowStringCharacters -> False], 
+         RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+        SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+    InterpretationFunction->(RowBox[{"Limit", "[", 
+       RowBox[{#, ",", 
+         RowBox[{#2, "->", #3}]}], "]"}]& )], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "fa6e47ad-1261-442d-9dcb-f9a66268911a"],
+ "- 1)/y = 1.\n\[CapitalCHacek]e pa sta leva in desna limita enaki, obstaja \
+tudi limita funkcije in je enaka tej vrednosti. Na enak na\[CHacek]in kot v \
+primeru desne limite tudi vidimo, da je ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{SuperscriptBox["e", 
+      RowBox[{"x", " "}]],"x","0"},
+    "Limit2Arg",
+    DisplayFunction->(RowBox[{
+       TagBox[
+        UnderscriptBox[
+         StyleBox["\"lim\"", ShowStringCharacters -> False], 
+         RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+        SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+    InterpretationFunction->(RowBox[{"Limit", "[", 
+       RowBox[{#, ",", 
+         RowBox[{#2, "->", #3}]}], "]"}]& )], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "99ca8198-48a5-4569-b6ef-f36be5105d34"],
+ " = 1, kar bomo potrebovali pri dokazu zveznosti eksponentne funkije.\n\n(d) \
+) Limita ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{"sin","x","0"},
+    "Limit2Arg",
+    DisplayFunction->(RowBox[{
+       TagBox[
+        UnderscriptBox[
+         StyleBox["\"lim\"", ShowStringCharacters -> False], 
+         RowBox[{#2, "\[Rule]", #3}], LimitsPositioning -> True], Identity, 
+        SyntaxForm -> "\[Limit]", Tooltip -> "Limit"], #}]& ),
+    InterpretationFunction->(RowBox[{"Limit", "[", 
+       RowBox[{#, ",", 
+         RowBox[{#2, "->", #3}]}], "]"}]& )], TraditionalForm]],
+  CellChangeTimes->{{3.7884420894559813`*^9, 3.788442104560004*^9}, 
+    3.78844213492204*^9, 3.788447898304625*^9},ExpressionUUID->
+  "a77f4a20-3655-4301-94ad-071ad0338c53"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]],ExpressionUUID->
+  "02367831-7de9-4e15-92ba-c58e8cdcc177"],
+ " ne obstaja, ko gre x \[Rule] 0.  Pravzaprav ne obstaja niti leva niti \
+desna limita. Za razli\[CHacek]na zaporedja, ki konvergirajo k 0 dobimo lahko \
+zelo razli\[CHacek]ne vrednosti za\nlimito zaporedja ustreznih funkcijskih \
+vrednosti (izberimo npr. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[InvisiblePrefixScriptBase]", 
+    SubscriptBox["x", "n"]}], TraditionalForm]],ExpressionUUID->
+  "0bfff72e-8edd-4ee0-a176-82ffe39f237e"],
+ " = 1/n\[Pi], ali ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],ExpressionUUID->
+  "00b62adf-eeb7-453f-a1f3-4ebd843f028f"],
+ " = 2/n\[Pi] itd.). V bli\[ZHacek]ini to\[CHacek]ke 0 graf funkcije divje \
+oscilira.\n\n"
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJwdzVsogwEABeCZhZBEE/80LKaRRaaQbPt50JYSecCS5FIURRQPkhpLi7m0
+FLnkMmau5YEms8aWJTLEyFpsLk2tVjwo/GcPp6/zck5SfXt5I51GoyVSgfFl
+u2Znnkd81mU+h0sNBuKZMtaqSoAeTxQX8j/2BVD7rRRC3YGNhE+bBSEvlHK3
+KhTaZRYmdFbZCPh2G8aBJWZZIRTlLpBwZqhXAokVuslFGeK4tUJuoPMCfqnn
+ruGYve4Baiv4Dlgb1PkLT3tGGG5KxQ8rHF61CaOghrMVA1e9RQT0HRWnQIPu
+MRVWfxnSoXuxMgNGOvtzodZ0nw8tZCkJO5J4EhjYUiOHWaZJJXzUV03DzeWm
+WaiMzl6DkkOuDtpnhHtwflB/DH+N9hP/vlF1CQU5rTewe9z6Cdl8zZ//b1ca
+8EppiwgLhusabwQUxDGjoXqUxYQkh03AzLy0ZDi8Q8+HiRs+Kfxw3Zf7+7a4
+GU7dHQxBkXpgAip4Gto7pZ7ex4D/HUoQgQ==
+  "],ExpressionUUID->"f0f43e5c-29a2-4d82-988e-94c1165ec2a2"],
+
+Cell[TextData[{
+ StyleBox["Primeri limit:",
+  FontVariations->{"Underline"->True},
+  Background->RGBColor[0.8235294117647058, 0.8235294117647058, 1.]],
+ "\n1."
+}], "Text",
+ CellChangeTimes->{{3.788455073131513*^9, 3.7884550758423395`*^9}, 
+   3.7884551206764383`*^9, {3.788455204046045*^9, 3.7884552523739176`*^9}, {
+   3.7884554016222587`*^9, 3.788455403572132*^9}, {3.788455612570608*^9, 
+   3.788455618753208*^9}, {3.7884558513681555`*^9, 3.788455859457633*^9}, {
+   3.788455893746414*^9, 3.788455917707863*^9}, {3.7884559793128805`*^9, 
+   3.788456002014409*^9}, 3.788456155578473*^9, {3.7884564693091707`*^9, 
+   3.788456501965059*^9}, 
+   3.788456599049777*^9},ExpressionUUID->"749b5d46-d4c2-4426-b039-\
+e36b2a181df0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", " ", 
+       RowBox[{"x", "^", "3"}]}], "-", "1"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"5", " ", 
+       RowBox[{"x", "^", "3"}]}], "+", "x", "-", "1"}], ")"}]}], ",", 
+   RowBox[{"x", "\[Rule]", "\[Infinity]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7884566199844217`*^9, 3.788456620020418*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"beec5eb5-2846-4f5d-b899-ef1e4ea380ed"],
+
+Cell[BoxData[
+ FractionBox["2", "5"]], "Output",
+ CellChangeTimes->{3.7884566226992474`*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"7fd1e9e1-636d-4bdb-ad23-4a4468963beb"]
+}, Open  ]],
+
+Cell[BoxData["2."], "Input",
+ CellChangeTimes->{{3.788456630686731*^9, 
+  3.7884566312066975`*^9}},ExpressionUUID->"4a0945be-616b-40d3-8c08-\
+54e645ff3d6c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"x", "^", "3"}], "-", "1"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"x", "-", "1"}], ")"}]}], ",", 
+   RowBox[{"x", "\[Rule]", "1"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.788456635819398*^9, 3.788456663747589*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"7e70ebf1-6a9f-4af2-97f6-664645dca933"],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.7884566660264444`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"b240304a-e1cf-4db8-8934-a2cc2e639731"]
+}, Open  ]],
+
+Cell[BoxData["3."], "Input",
+ CellChangeTimes->{{3.7884566684562855`*^9, 
+  3.788456668991251*^9}},ExpressionUUID->"566998bc-c1ba-4589-ad4e-\
+0702d6972087"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     RowBox[{"3", "x"}], "]"}], "/", 
+    RowBox[{"Tan", "[", 
+     RowBox[{"5", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"x", " ", "\[Rule]", " ", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7884567803700466`*^9, 3.7884568557191687`*^9}, {
+  3.7884568872681274`*^9, 3.788456910061651*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"370268c4-1c50-41d5-a6f6-c02e99af209a"],
+
+Cell[BoxData[
+ FractionBox["3", "5"]], "Output",
+ CellChangeTimes->{3.788456912630483*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"10e0e6e4-0a20-4e08-a87f-efa7b820e193"]
+}, Open  ]],
+
+Cell[BoxData["4."], "Input",
+ CellChangeTimes->{{3.7884569214089174`*^9, 
+  3.788456922541844*^9}},ExpressionUUID->"81263ccf-7725-4fe9-9d04-\
+d60afe6670d3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"1", "-", 
+     RadicalBox[
+      RowBox[{"x", "-", "1"}], "3"]}], 
+    RowBox[{
+     RowBox[{"2", "x"}], "-", "4"}]], ",", " ", 
+   RowBox[{"x", "\[Rule]", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7884568743579636`*^9, 3.788456879287644*^9}, {
+  3.7884569262036076`*^9, 3.788457044739938*^9}, {3.788457076664872*^9, 
+  3.7884571406387324`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"f6df5fbc-41de-4a55-96d9-f5193bc14dfe"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox["1", "6"]}]], "Output",
+ CellChangeTimes->{3.7884571419536457`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"a36a1cad-5119-43b7-abad-0b30a22628a5"]
+}, Open  ]],
+
+Cell[BoxData["5."], "Input",
+ CellChangeTimes->{{3.7884571621143417`*^9, 
+  3.7884571652271395`*^9}},ExpressionUUID->"e9bc6d9e-4447-4d04-b9a9-\
+3c020839fa1c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox["1", "x"]}], ")"}], 
+    RowBox[{"3", "x"}]], ",", 
+   RowBox[{"x", "\[Rule]", "Infinity"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.788457179621209*^9, 3.78845722891302*^9}, {
+  3.7884572668945637`*^9, 3.788457305004094*^9}, {3.788457792446554*^9, 
+  3.7884578003420453`*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"88e6995c-4422-4a98-9e41-c37886f6ddbc"],
+
+Cell[BoxData[
+ SuperscriptBox["\[ExponentialE]", "3"]], "Output",
+ CellChangeTimes->{3.788457804028805*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"11b2f1d5-2717-495e-bcb5-fb60af476c6e"]
+}, Open  ]],
+
+Cell[BoxData["6."], "Input",
+ CellChangeTimes->{{3.788457807494582*^9, 
+  3.788457807807563*^9}},ExpressionUUID->"0a6eac81-682d-4313-a745-\
+e54a0ecfc89f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   FormBox[
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["x", "2"], "-", "1"}], 
+     RowBox[{"x", "-", "1"}]],
+    TraditionalForm], ",", " ", 
+   RowBox[{"x", " ", "\[Rule]", " ", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.788457303029225*^9, 3.7884573031202216`*^9}, {
+  3.788457877494051*^9, 3.7884578989086666`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"43adcffd-e0df-466b-bee3-ff27bb73a974"],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.7884578999525995`*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"be03874f-bf07-4eda-b903-717ad44f6c08"]
+}, Open  ]]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1615, 26, 51, "Input",ExpressionUUID->"2714567a-bb91-4a2a-bd5c-2e49fe109ddc"],
+Cell[2176, 48, 4212, 93, 126, "Text",ExpressionUUID->"6d5602d8-6b49-48b0-85c4-a1574d607576",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[6391, 143, 22669, 598, 247, "Input",ExpressionUUID->"c6e34687-0188-4a0e-8963-6bacd4328023"],
+Cell[29063, 743, 7110, 211, 179, "Text",ExpressionUUID->"0d98ac5d-75ef-432f-9f1e-533572698a04",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[36176, 956, 5266, 132, 290, "Text",ExpressionUUID->"324b00c6-61e4-442b-a5ad-06a2ae1ec323"],
+Cell[41445, 1090, 2992, 79, 281, "Text",ExpressionUUID->"d37c703d-eb04-487b-9759-b3a957a9fd82"],
+Cell[44440, 1171, 1585, 38, 188, "Text",ExpressionUUID->"d48fd377-fcb3-4204-b4f1-f39de0728213"],
+Cell[46028, 1211, 572, 15, 47, "Text",ExpressionUUID->"8e04582e-f921-4cc5-88e6-28053c26ea4e"],
+Cell[46603, 1228, 17341, 432, 687, "Text",ExpressionUUID->"f0f43e5c-29a2-4d82-988e-94c1165ec2a2"],
+Cell[63947, 1662, 724, 14, 56, "Text",ExpressionUUID->"749b5d46-d4c2-4426-b039-e36b2a181df0"],
+Cell[CellGroupData[{
+Cell[64696, 1680, 513, 14, 28, "Input",ExpressionUUID->"beec5eb5-2846-4f5d-b899-ef1e4ea380ed"],
+Cell[65212, 1696, 170, 3, 49, "Output",ExpressionUUID->"7fd1e9e1-636d-4bdb-ad23-4a4468963beb"]
+}, Open  ]],
+Cell[65397, 1702, 156, 3, 28, "Input",ExpressionUUID->"4a0945be-616b-40d3-8c08-54e645ff3d6c"],
+Cell[CellGroupData[{
+Cell[65578, 1709, 408, 11, 28, "Input",ExpressionUUID->"7e70ebf1-6a9f-4af2-97f6-664645dca933"],
+Cell[65989, 1722, 150, 2, 32, "Output",ExpressionUUID->"b240304a-e1cf-4db8-8934-a2cc2e639731"]
+}, Open  ]],
+Cell[66154, 1727, 156, 3, 28, "Input",ExpressionUUID->"566998bc-c1ba-4589-ad4e-0702d6972087"],
+Cell[CellGroupData[{
+Cell[66335, 1734, 455, 11, 28, "Input",ExpressionUUID->"370268c4-1c50-41d5-a6f6-c02e99af209a"],
+Cell[66793, 1747, 168, 3, 49, "Output",ExpressionUUID->"10e0e6e4-0a20-4e08-a87f-efa7b820e193"]
+}, Open  ]],
+Cell[66976, 1753, 156, 3, 28, "Input",ExpressionUUID->"81263ccf-7725-4fe9-9d04-d60afe6670d3"],
+Cell[CellGroupData[{
+Cell[67157, 1760, 508, 13, 54, "Input",ExpressionUUID->"f6df5fbc-41de-4a55-96d9-f5193bc14dfe"],
+Cell[67668, 1775, 189, 4, 49, "Output",ExpressionUUID->"a36a1cad-5119-43b7-abad-0b30a22628a5"]
+}, Open  ]],
+Cell[67872, 1782, 158, 3, 28, "Input",ExpressionUUID->"e9bc6d9e-4447-4d04-b9a9-3c020839fa1c"],
+Cell[CellGroupData[{
+Cell[68055, 1789, 485, 12, 45, "Input",ExpressionUUID->"88e6995c-4422-4a98-9e41-c37886f6ddbc"],
+Cell[68543, 1803, 186, 3, 32, "Output",ExpressionUUID->"11b2f1d5-2717-495e-bcb5-fb60af476c6e"]
+}, Open  ]],
+Cell[68744, 1809, 154, 3, 28, "Input",ExpressionUUID->"0a6eac81-682d-4313-a745-e54a0ecfc89f"],
+Cell[CellGroupData[{
+Cell[68923, 1816, 461, 12, 48, "Input",ExpressionUUID->"43adcffd-e0df-466b-bee3-ff27bb73a974"],
+Cell[69387, 1830, 151, 2, 32, "Output",ExpressionUUID->"be03874f-bf07-4eda-b903-717ad44f6c08"]
+}, Open  ]]
+}
+]
+*)
+
